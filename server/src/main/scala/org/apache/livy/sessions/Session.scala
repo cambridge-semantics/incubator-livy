@@ -270,7 +270,7 @@ abstract class Session(
 
       val sessionDir = new Path(stagingRoot, UUID.randomUUID().toString())
       fs.mkdirs(sessionDir)
-      fs.setPermission(sessionDir, new FsPermission("700"))
+      fs.setPermission(sessionDir, new FsPermission("755"))
       stagingDir = sessionDir
       debug(s"Session $id staging directory is $stagingDir")
     }
